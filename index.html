@@ -14,13 +14,13 @@
     <meta property="og:url" content="https://lsh-expression.netlify.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="표정 분석 테스트" />
-    <meta property="og:description" content="당신의 얼굴에 어떤 감정이 드러나 있는지 테스트 해보세요!">
+    <meta property="og:description" content="당신의 얼굴에 어떤 감정이 들어나 있는지 테스트 해보세요!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&family=Jua&display=swap" rel="stylesheet">
 
     <meta name="title" content="얼굴 감정 분석">
-    <meta name="subject" content="당신의 얼굴에 드러나는 감정을 읽어볼게요!">
+    <meta name="subject" content="당신의 얼굴에 들어나는 감정을 읽어볼게요!">
     <meta name="keywords" content="인상 테스트, 인공지능 테스트, 인상, 감정분석, 표정, 감정, 감정 찾기, 인상 찾기, 얼굴 인상, 감정얼굴, 화남, 삐짐, 빡침, 즐거움, 혐오, AI 인상, AI 얼굴분석, 얼굴분석, 표정분석">
     <meta name="author" content="순금">
     <meta name="description" content="당신의 얼굴에 어떤 감정이 들어나 있는지 테스트 해보세요!">
@@ -41,7 +41,7 @@
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5500547827609101"
      crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
@@ -53,7 +53,7 @@
     </nav>
     <section class="section">
         <h1 class="title">표정 분석 테스트</h1>
-        <h2 class="subtitle">당신의 얼굴에 드러나는 감정을 읽어볼게요!</h2>
+        <h2 class="subtitle">당신의 얼굴에 들어나는 감정을 읽어볼게요!</h2>
     </section>
 
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -89,12 +89,7 @@
                 </div>
             </div>
     </div>
-    <ins class="kakao_ad_area" style="display:none;" 
- data-ad-unit    = "DAN-oaAIGEmcrhPzpnYi" 
- data-ad-width   = "320" 
- data-ad-height  = "100"></ins> 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>    
-        
+    
     <div id="webcam-container"></div>
     <div id="disqus_thread"></div>
     <script>
@@ -161,9 +156,9 @@
     </script>
     <script type="text/javascript">
     
-    const URL = "https://teachablemachine.withgoogle.com/models/Te3-PP8lw/";
+    const URL = "https://teachablemachine.withgoogle.com/models/2AnvJbbz9/";
 
-let model, webcam, labelContainer, maxPredictions;
+    let model, webcam, labelContainer, maxPredictions;
 
 // Load the image model and setup the webcam
 async function init() {
@@ -196,13 +191,13 @@ async function predict() {
 
     switch (prediction[0].className) {
         case "즐거움":
-            resultTitle = "즐거운 표정을 하시고 계시네요!"
+            resultTitle = "즐거운 표정을 하고 계시네요!"
             resultExplain = "무슨 즐거운 일이 있으셨나요?? 밝은 얼굴이 정말 보기 좋네요!"
                  
             break;
         case "혐오":
             resultTitle = "뭔가 이상한걸 보고 계시나요..?"
-            resultExplain = "무언가 짜증나면서도 보기싫은걸 보고있는듯한.. 표정을 하고 계시네요..?"
+            resultExplain = "무언가 짜증 나면서도 보기 싫은걸 보고 있는 듯한...?"
                 
             break;
         case "빡침":
@@ -213,13 +208,28 @@ async function predict() {
         case "삐짐":
             resultTitle = "앗! 뾰루퉁~"
             resultExplain = "얼굴에 삐진 모습이 가득한데요..? 무슨 일인지는 모르겠지만 기분 푸세요~~"
+            break;
+
+        case "놀람":
+            resultTitle = "어유~ 간 떨어지겠네~"
+            resultExplain = "뭐가 그렇게 놀라셨어요?? 자 심호흡~ 하나둘.."
+
+            break;    
+
+        case "중립":
+            resultTitle = "...?"
+            resultExplain = "아무 생각도 없는 거 같은... 아님 일부로 감정을 숨기는 거 일수도 있겠군요.."   
+
+            break;
+
+        case "슬픔":
+            resultTitle = "울면 안돼~"
+            resultExplain = "울지마~ 예쁜 얼굴 다 망가질라~"
                 
             break;
                     
         default:
-            resultTitle = "알수없음"
-            resultExplain = ""
-                
+            
     }
     var title = "<div class='" + prediction[0].className + "-animal-title'>" + resultTitle + "</div>"
     var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
@@ -248,8 +258,21 @@ async function predict() {
             case "삐짐":
                 labelTitle = "삐짐"
                 break;
+
+            case "놀람":
+                labelTitle = "놀람"
+                break;
+
+            case "중립":
+                labelTitle = "중립"
+                break;
+
+            case "슬픔":
+                labelTitle = "슬픔"
+                break;  
+
             default:
-                labelTitle = "알수없음"
+                
         }
         var label = "<div class='animal-label d-flex align-items-center'>" + labelTitle + "</div>"
         var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
