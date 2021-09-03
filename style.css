@@ -216,22 +216,22 @@ body {
   border-radius: 10px;
   background-color: rgba(117, 204, 84, 1);
 }
-.deer-box {
+.중립-box {
   position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(117, 204, 84, 0.2);
+  background-color: rgba(150, 150, 150, 0.2);
 }
-.deer-bar {
+.중립-bar {
   position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(117, 204, 84, 1);
+  background-color: rgb(121, 121, 121);
 }
 .즐거움-box {
   position: absolute;
@@ -267,7 +267,24 @@ body {
   border-radius: 10px;
   background-color: rgba(251, 176, 59, 1);
 }
-.bear-box {
+.놀람-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 83, 83, 0.288);
+}
+.놀람-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgb(255, 83, 83);
+}
+.슬픔-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -276,7 +293,7 @@ body {
   width: 100%;
   background-color: rgba(195, 140, 102, 0.2);
 }
-.bear-bar {
+.슬픔-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -284,7 +301,7 @@ body {
   border-radius: 10px;
   background-color: rgba(195, 140, 102, 1);
 }
-.fox-box {
+.놀람-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -293,7 +310,7 @@ body {
   width: 100%;
   background-color: rgba(49, 132, 155, 0.2);
 }
-.fox-bar {
+.놀람-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -365,6 +382,27 @@ body {
 }
 .빡침-animal-celeb {
     color: #e56995;
+    font-size: 1.2rem;
+}
+.놀람-animal-title {
+    color: #8d0086;
+}
+.놀람-animal-celeb {
+    color: #8d0086;
+    font-size: 1.2rem;
+}
+.중립-animal-title {
+    color: #424242;
+}
+.중립-animal-celeb {
+    color: #424242;
+    font-size: 1.2rem;
+}
+.슬픔-animal-title {
+    color: #7a8800;
+}
+.슬픔-animal-celeb {
+    color: #7a8800;
     font-size: 1.2rem;
 }
 
@@ -475,3 +513,4 @@ input:checked + label > .knob > i:before {
   background-color: skyblue
 
 }  
+
