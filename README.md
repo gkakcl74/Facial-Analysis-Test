@@ -7,3 +7,4 @@ It's an app that uses machine learning to analyze faces and tell you what emotio
 Try using apk or going to this website. https://lsh-expression.netlify.app/
 
 You can use the html file as you like.
+### But it's not a good code, so I recommend you just keep that in mind.
