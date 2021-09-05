@@ -1,2 +1,2 @@
 User-agent: *Allow:/
-Sitemap: https://lsh-expression.netlify.app//sitemap.xml
+Sitemap: https://faan.netlify.app//sitemap.xml
