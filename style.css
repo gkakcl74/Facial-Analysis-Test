@@ -157,27 +157,6 @@ body {
 }
 
 
-.youtube-link {
-    font-size: 1.5rem;
-    line-height: 1.71;
-    text-align: center;
-    color: #f73737;
-    text-decoration: underline;
-}
-
-.youtube-link:hover {
-    font-size: 1.5rem;
-    line-height: 1.71;
-    text-align: center;
-    color: #f73737;
-    text-decoration: underline;
-}
-
-.youtube-icon {
-    width: 30px;
-    height: 27.262px;
-}
-
 .upload {
     width: 20%;
 }
@@ -406,11 +385,6 @@ body {
     font-size: 1.2rem;
 }
 
-
-/* gender */
-input#gender {
-  display: none;
-}
 
 label {
   cursor: pointer;
