@@ -1,3 +1,2 @@
-User-agent: *
-Allow:/
+User-agent: * Allow:/
 Sitemap: https://faan.tk/sitemap.xml
